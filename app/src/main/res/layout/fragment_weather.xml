@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weather_photo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/get_weather_data_button"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/photo_imv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/gray" />
+
+        <View
+            android:id="@+id/overlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/transparent_scrim"
+            app:layout_constraintBottom_toBottomOf="@id/photo_imv"
+            app:layout_constraintEnd_toEndOf="@id/photo_imv"
+            app:layout_constraintStart_toStartOf="@id/photo_imv"
+            app:layout_constraintTop_toTopOf="@id/photo_imv" />
+
+        <TextView
+            android:id="@+id/location_txv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_16"
+            android:padding="@dimen/dp_16"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Maadi" />
+
+        <TextView
+            android:id="@+id/weather_status_txv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="@+id/weather_status_imv"
+            app:layout_constraintStart_toStartOf="@+id/weather_status_imv"
+            app:layout_constraintTop_toBottomOf="@id/weather_status_imv"
+            tools:text="Cloud" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/weather_status_imv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="@+id/location_txv"
+            app:layout_constraintTop_toBottomOf="@+id/location_txv" />
+
+        <TextView
+            android:id="@+id/temp_txv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_50"
+            app:layout_constraintBottom_toBottomOf="@+id/weather_status_imv"
+            app:layout_constraintStart_toStartOf="@+id/location_txv"
+            app:layout_constraintTop_toTopOf="@+id/weather_status_imv"
+            tools:text="17" />
+
+        <TextView
+            android:id="@+id/min_temp_txv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/weather_status_txv"
+            app:layout_constraintEnd_toEndOf="@+id/temp_txv"
+            app:layout_constraintStart_toStartOf="@+id/temp_txv"
+            app:layout_constraintTop_toBottomOf="@id/temp_txv"
+            tools:text="20 / 15" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/get_weather_data_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/get_weather_data"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

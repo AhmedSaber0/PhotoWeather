@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Photo Weather</string>
+    <string name="search">Search…</string>
+    <string name="loading">loading</string>
+    <string name="retry">Retry</string>
+    <string name="label_error">something went wrong, please try again!</string>
+    <string name="no_results">No results</string>
+    <string name="pick_photo">Pick Photo</string>
+    <string name="error_opening_camera">Error opening camera</string>
+    <string name="capture_photo">Capture Photo</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="error_creating_file">Error creating file</string>
+    <string name="get_weather_data">Get Weather Data</string>
+    <string name="ok">OK</string>
+    <string name="error_occurred">Error occurred, try again</string>
+    <string name="share_photo">Share Photo</string>
+    <string name="share_with">Share with…</string>
+
+</resources>
